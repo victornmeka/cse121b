@@ -33,7 +33,7 @@ let favFood =['Beans', ' Chicken', ' Fish ', ' Salad '];
 document.querySelector('#food').innerHTML = favFood;
 
 // Step 3: declare and instantiate a variable to hold another favorite food
-let otherFavFood = ['Okra ', 'Pounded yam ', ' eggs']
+let otherFavFood = ['Okra ', 'Pounded yam ','Egusi', ' Eggs']
 
 // Step 4: add the variable holding another favorite food to the favorite food array
 
