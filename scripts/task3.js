@@ -32,7 +32,7 @@ const subtractNumbers = function() {
     let minuend = parseInt(document.querySelector('#minuend').value);
     let subtrahend = parseInt(document.querySelector('#subtrahend').value);
     let result = subtract(minuend, subtrahend);
-    document.querySelector('#difference') = result;
+    document.querySelector('#difference').value = result;
 }
 
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
@@ -43,8 +43,8 @@ const multiply = (number1, number2) => number1 * number2;
 const multiplyNumbers = () => {
     let factor1 = parseInt(document.querySelector('#factor1').value);
     let factor2 = parseInt(document.querySelector('#factor2').value);
-    let results = multiply(factor1, factor2);
-    results = document.querySelector('#product');
+    let result = multiply(factor1, factor2);
+    result = document.querySelector.value('#product');
 }
 
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
@@ -79,7 +79,7 @@ currentYear = document.querySelector('#year').textContent;
 /* ARRAY METHODS */
 
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
-let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
 number = document.querySelector('#array').textContent;
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
