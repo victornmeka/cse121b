@@ -44,7 +44,7 @@ const multiplyNumbers = () => {
     let factor1 = parseInt(document.querySelector('#factor1').value);
     let factor2 = parseInt(document.querySelector('#factor2').value);
     let result = multiply(factor1, factor2);
-    document.querySelector.value('#product').value = result;
+    document.querySelector('#product').value = result;
 }
 
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
