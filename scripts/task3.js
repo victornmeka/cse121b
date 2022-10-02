@@ -44,7 +44,7 @@ const multiplyNumbers = () => {
     let factor1 = parseInt(document.querySelector('#factor1').value);
     let factor2 = parseInt(document.querySelector('#factor2').value);
     let result = multiply(factor1, factor2);
-    document.querySelector.value('#product') = result;
+    document.querySelector.value('#product').value = result;
 }
 
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
@@ -58,7 +58,7 @@ function divideNumbers() {
     let dividend = parseInt(document.querySelector('#dividend').value);
     let divisor = parseInt(document.querySelector('#divisor').value);
     let result = divide(dividend, divisor);
-    result = document.querySelector('#quotient').value;
+    document.querySelector('#quotient').value = result;
 }
 
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
