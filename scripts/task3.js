@@ -79,16 +79,16 @@ currentYear = document.querySelector('#year').textContent;
 /* ARRAY METHODS */
 
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
-const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
-number = document.querySelector('#array').textContent;
+document.querySelector('#array').textContent = numbers;
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
-number.filter(number => number % 2) = document.querySelector('#even').textContent;
+document.querySelector('#odds').textContent = numbers.filter(number => number % 2);
 // Step 4: Use the filter array method to find all of the even numbers of the array variable and assign the result to the HTML element with an ID of "evens"
-number.filter(number => number % 2 === 0) = document.querySelector('#odd').textContent;
+document.querySelector('#evens').textContent = numbers.filter(number => number % 2 === 0);
 // Step 5: Use the reduce array method to sum the array variable elements and assign the result to the HTML element with an ID of "sumOfArray"
-number.reduce((sum, number) => sum + number, 0) = document.querySelector('#sumOfArray').textContent;
+document.querySelector('#sumOfArray').textContent = numbers.reduce((sum, number) => sum + number, 0);
 // Step 6: Use the map array method to multiple each element in the array variable by 2 and assign the result to the HTML element with an ID of "multiplied"
-number.map(number => number * 2) = document.querySelector('#multiplied').textContent;
+document.querySelector('#multiplied').textContent = numbers.map(number => number * 2);
 // Step 7: Use the map and reduce array methods to sum the array elements after multiplying each element by two.  Assign the result to the HTML element with an ID of "sumOfMultiplied"
-number.map(number => number * 2).reduce((sum, number) => sum + number, 0) = document.querySelector('#sumOfMultiplied').textContent;
+document.querySelector('#sumOfMultiplied').textContent = numbers.map(number => number * 2).reduce((sum, number) => sum + number, 0) ;
