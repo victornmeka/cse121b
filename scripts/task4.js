@@ -19,11 +19,16 @@ myInformation.hobbies = ["travelling","listening to music","reading"]
 myInformation.placeLived = []
 
 // Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
-let Obj = {}
-Obj.place = "Lagos State"
-Obj["length"] = "20 year"
-
-myInformation.placeLived.push(Obj)
+myInformation.placeLived = [
+    {
+        place: "Olodi-Apapa,Lagos State, Nigeria",
+        length: 18, 
+    },
+    {
+        place: "Yaba,Lagos State, Nigeria",
+        length: 2, 
+    },
+]
 // Step 8: For each property, add appropriate values as strings
 
 
