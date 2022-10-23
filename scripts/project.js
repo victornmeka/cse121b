@@ -1,32 +1,15 @@
-const button = document.querySelector('#generate-jokes');
-button.addEventListener('click',generateNewJokes);
-function generateNewJokes(e) {
-    const newXHRRequest = new XMLHttpRequest();
-    const numberOfJokes = document.querySelector('#number-of-jokes').value;
+const jokeSection = document.getElementById('joke');
+const generate = document.getElementById('generate');
+const url = 'https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
 
-    newXHRRequest.open(
-        'GET',
-        `https://api.icndb.com/jokes/random/${numberOfJokes}`,
-        true
-    );
-
-    newXHRRequest.onload = function () {
-        if (this.status === 200) {
-            const myJokes = JSON.parse(this.responseText);
-            let output = '';
-            if (myJokes.type === 'succcess') {
-                myJokes.value.forEach(function (joke) {
-                    output += `<li>${joke.joke}</li>`;
-                });
-            } else {
-                output += `<li>Sorry! Couldn't get jokes</li>`;
-            }
-
-            document.querySelector('#jokes').innerHTML = output;
-        }
-    };
-
-    newXHRRequest.send();
-
-
+async function getJoke() {
+    jokeSection.classList.remove('fade');
+    fetch(url)
+    .then(data => data.json())
+    .then(item => {
+        jokeSection.textContent = `${item.joke}`;
+        jokeSection.classList.add('fade');
+    });
 }
+generate.addEventListener('click',getJoke);
+getJoke();

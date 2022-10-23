@@ -5,3 +5,6 @@ const toggleMenu = () => {
 
 document.querySelector('#toggleMenu').addEventListener('click', toggleMenu);
 
+const currentYear = new Date().getFullYear()
+
+document.querySelector('#year').innerHTML = currentYear;

@@ -13,6 +13,7 @@ footer {
     color: white;
     padding: 5px;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 header {
@@ -71,6 +72,8 @@ nav ul li a:hover {
     display: block;
 }
 
+
+
 /* ID Selectors */
 #favorite-foods, #hobbies, #places-lived {
     margin: 0;
@@ -79,6 +82,18 @@ nav ul li a:hover {
     display: inline-block;
     text-align: left;
     vertical-align: top;
+}
+#generate-button {
+    display: block;
+    background-color: lightgray;
+    border: none;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 25px;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Media Queries */
